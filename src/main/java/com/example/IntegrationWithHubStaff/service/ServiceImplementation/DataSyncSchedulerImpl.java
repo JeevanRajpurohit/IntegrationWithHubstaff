@@ -23,7 +23,7 @@ public class DataSyncSchedulerImpl implements DataSyncScheduler {
     @Autowired private HubstaffAPIService hubstaffAPIService;
     @Autowired private OrganizationRepository organizationRepository;
 
-  //  @Scheduled(cron = "* * * * * *")
+    @Scheduled(cron = "0 0 0 * * *")
     @Override
     public void syncOrganizations() {
         log.info("Starting sync of organizations");
@@ -36,7 +36,7 @@ public class DataSyncSchedulerImpl implements DataSyncScheduler {
         log.info("Completed sync of organizations");
     }
 
- //   @Scheduled(cron = "* * * * * *")
+    @Scheduled(cron = "0 0 0 * * *")
     @Override
     public void syncOrganizationMembers() {
         log.info("Starting sync of organization members");
@@ -58,7 +58,7 @@ public class DataSyncSchedulerImpl implements DataSyncScheduler {
         log.info("Completed sync of organization members");
     }
 
- //   @Scheduled(cron = "* * * * * *")
+    @Scheduled(cron = "0 0 0 * * *")
     @Override
     public void syncApplicationActivities() {
         log.info("Starting sync of application activities");
